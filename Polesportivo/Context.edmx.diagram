@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3a348399dd914ff1a84cd5ea2c021e74" Name="Diagram1" >
+        <EntityTypeShape EntityType="PolesportivoModel.Atleta" Width="1.5" PointX="3.5" PointY="3.75" />
+        <EntityTypeShape EntityType="PolesportivoModel.Modalidade" Width="1.5" PointX="5.625" PointY="1.625" />
+        <EntityTypeShape EntityType="PolesportivoModel.Evento" Width="1.5" PointX="3.5" PointY="1.625" />
+        <EntityTypeShape EntityType="PolesportivoModel.EventoModalidade" Width="1.5" PointX="5.625" PointY="3.75" />
+        <EntityTypeShape EntityType="PolesportivoModel.Dados" Width="1.5" PointX="7.375" PointY="1.625" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

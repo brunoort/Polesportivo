@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="PolesportivoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="PolesportivoModelStoreContainer" />
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PolesportivoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="PolesportivoEntities" annotation:LazyLoadingEnabled="true" >
+          <EntitySet Name="Atletas" EntityType="PolesportivoModel.Atleta" />
+          <EntitySet Name="Modalidades" EntityType="PolesportivoModel.Modalidade" />
+          <EntitySet Name="Eventoes" EntityType="PolesportivoModel.Evento" />
+          <EntitySet Name="EventoModalidades" EntityType="PolesportivoModel.EventoModalidade" />
+          <EntitySet Name="Dados" EntityType="PolesportivoModel.Dados" />
+        </EntityContainer>
+        <EntityType Name="Atleta">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="String" Nullable="false" />
+          <Property Name="Sobrenome" Type="String" Nullable="false" />
+          <Property Name="Email" Type="String" Nullable="false" />
+          <Property Name="Sexo" Type="String" Nullable="false" />
+          <Property Name="Clube" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Modalidade">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Descricao" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Evento">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="String" Nullable="false" />
+          <Property Name="Descricao" Type="String" Nullable="false" />
+          <Property Name="DataEvento" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EventoModalidade">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdEvento" Type="Int32" Nullable="false" />
+          <Property Name="Tipo" Type="String" Nullable="false" />
+          <Property Name="Descricao" Type="String" Nullable="false" />
+          <Property Name="Campo1" Type="Int32" Nullable="false" />
+          <Property Name="Campo2" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Dados">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdEvento" Type="Int32" Nullable="false" />
+          <Property Name="IdAtleta" Type="Int32" Nullable="false" />
+          <Property Name="Largada" Type="Time" Nullable="false" />
+          <Property Name="ChipLargada" Type="Time" Nullable="false" />
+          <Property Name="Split1" Type="Time" Nullable="false" />
+          <Property Name="Split2" Type="Time" Nullable="false" />
+          <Property Name="Split3" Type="Time" Nullable="false" />
+          <Property Name="Split4" Type="Time" Nullable="false" />
+          <Property Name="Split5" Type="Time" Nullable="false" />
+          <Property Name="Split6" Type="Time" Nullable="false" />
+          <Property Name="Split7" Type="Time" Nullable="false" />
+          <Property Name="Split8" Type="Time" Nullable="false" />
+          <Property Name="Split9" Type="Time" Nullable="false" />
+          <Property Name="Split10" Type="Time" Nullable="false" />
+          <Property Name="Adjustment" Type="Time" Nullable="false" />
+          <Property Name="Chegada" Type="Time" Nullable="false" />
+          <Property Name="Total" Type="Time" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PolesportivoModelStoreContainer" CdmEntityContainer="PolesportivoEntities" />
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

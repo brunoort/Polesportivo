@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>ProtocoloWeb</title>
+
+    <meta name="description" content="overview &amp; stats" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--styles-->
+    <link href="~/Content/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/assets/css/bootstrap-responsive.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/Content/assets/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" />
+    <link rel="stylesheet" href="~/Content/assets/css/ace.min.css" />
+    <link rel="stylesheet" href="~/Content/assets/css/ace-responsive.min.css" />
+    <link rel="stylesheet" href="~/Content/MyStyle.css" />
+    <!-- base -->
+    <script src="~/Content/assets/js/jquery-2.0.3.min.js"></script>
+    <script src="~/Content/assets/js/bootstrap.min.js"></script>
+    <script src="~/Content/assets/js/jquery.mobile.custom.min.js"></script>
+    <script src="~/Content/assets/js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="~/Content/assets/js/jquery.ui.touch-punch.min.js"></script>
+    <script src="~/Content/assets/js/ace-elements.min.js"></script>
+    <script src="~/Content/assets/js/ace.min.js"></script>
+    <script src="~/Content/assets/js/jquery.maskedinput.min.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+    <script src="~/Scripts/functions.js"></script>
+
+</head>
+
+    <body>
+        @Html.Partial("~/Views/Shared/Theme.cshtml")
+               
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="container-fluid">
+                    <a href="#" class="brand" style="margin-left: 1%;">
+                        <img src="~/Content/assets/images/logo.png" alt="Logo" />
+                        <small>ProtocoloWeb</small>
+                    </a>
+
+                    @Html.Partial("~/Views/Shared/LogBox.cshtml")
+
+                </div>
+            </div>
+        </div>
+
+        <div class="main-container container-fluid">
+
+            <!-- Menu (Inicio) -->
+            @Html.Partial("~/Views/Shared/MenuBox.cshtml")
+            <!-- Menu (Fim) -->
+
+            <div class="main-content">
+                
+                @RenderBody()
+                                
+            </div>
+            
+        </div>  
+    
+    </body>
+</html>
